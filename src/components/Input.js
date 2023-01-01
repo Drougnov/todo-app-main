@@ -1,4 +1,5 @@
 import React from 'react';
+import { nanoid } from 'nanoid';
 
 const Input = (props) => {
 
@@ -10,6 +11,7 @@ const Input = (props) => {
 
     props.onSubmit(
       {
+        id: nanoid(),
         text: input
       }
     )
