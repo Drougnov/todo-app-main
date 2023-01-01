@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 :root{
+  --light-bg-overlay: hsl(220, 98%, 61%);
+  --dark-bg-overlay-1: hsl(192, 100%, 67%);
+  --dark-bg-overlay-2: hsl(280, 87%, 65%);
   --Very-Dark-Blue: hsl(235, 21%, 11%);
   --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
   --Light-Grayish-Blue: hsl(234, 39%, 85%);
@@ -16,4 +19,31 @@
 body{
   font-size: 1.125rem;
   font-family: 'Josefin Sans', sans-serif;
+}
+header{
+  height: 12.5rem;
+  background: url(./images/bg-mobile-light.jpg) no-repeat, var(--light-bg-overlay);
+  background-size: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem 1.5rem;
+}
+header.dark{
+  background: url(./images/bg-mobile-dark.jpg) no-repeat, linear-gradient(to right, var(--dark-bg-overlay-1), var(--dark-bg-overlay-2));
+  background-size: 100%;
+}
+header .logo{
+  color: white;
+  font-size: 1.75rem;
+  letter-spacing: 5px;
+}
+header .toggle-btn{
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.toggle-btn img{
+  width: 1.25rem;
+  height: 1.25rem;
 }
