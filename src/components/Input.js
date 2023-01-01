@@ -21,9 +21,9 @@ const Input = (props) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <button type='submit'></button>
-      <input type="text" placeholder="Create a new todo..." name='text' value={input} onChange={handleChange} autoFocus/>
+    <form onSubmit={handleSubmit} className="form">
+      <button type='submit' aria-label='add todo' className='form__btn'></button>
+      <input type="text" placeholder="Create a new todo..." name='text' value={input} onChange={handleChange} autoFocus className='form__input'/>
     </form>
   )
 }
