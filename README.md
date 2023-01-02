@@ -63,6 +63,8 @@ Users should be able to:
 
 - How to add gradient border
 
+- How to resolve merge conflict
+
 ### Continued development
 
 - Nothing came in mind yet
