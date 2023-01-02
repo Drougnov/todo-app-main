@@ -6,24 +6,35 @@
 }
 :root{
   --logo: hsl(0, 0%, 98%);                            /* logo input-bg-light*/
-  --light-bg-overlay: hsl(220, 98%, 61%);             /* bg-overlay-light*/
+  --light-bg-overlay: hsl(220, 98%, 61%);             /* bg-overlay-light circle-border-gradient*/
   --dark-bg-overlay-1: hsl(192, 100%, 67%);           /* bg-overlay-dark-1 */
   --dark-bg-overlay-2: hsl(280, 87%, 65%);            /* bg-overlay-dark-2 */
-  --dark-input-text: hsl(233, 11%, 84%);              /* input-text-dark */
+  --Light-Grayish-Blue: hsl(233, 11%, 84%);
   --dark-input-bg: hsl(235, 24%, 19%);                /* input-bg-dark */
-  --circle-border: hsl(234, 11%, 52%);                /* circle-border-dark */
+  --circle-border: hsl(234, 11%, 52%);                /* circle-border */
   --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
   --Dark-Grayish-Blue: hsl(236, 9%, 61%);
   --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
-  --Very-Dark-Blue: hsl(235, 21%, 11%);               /* input-text-light */
+  --body-bg-dark: hsl(235, 21%, 11%);               /* body-bg-dark input-text-light */
   --Light-Grayish-Blue: hsl(234, 39%, 85%);
-  --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+  --body-bg-light: hsl(236, 33%, 92%);              /* body-bg-light input-text-dark */
   --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
   --Very-Dark-Grayish-Blue-2: hsl(237, 14%, 26%);
 }
 body{
+  min-height: 100vh;
   font-size: 1.125rem;
   font-family: 'Josefin Sans', sans-serif;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  background: var(--body-bg-light);
+}
+.container-dark{
+  width: 100%;
+  height: 100%;
+  background: var(--body-bg-dark);
 }
 header{
   height: 12.5rem;
@@ -64,7 +75,7 @@ main .form-dark{
 .form__input{
   width: 100%;
   height: 3rem;
-  color: var(--Very-Dark-Blue);
+  color: var(--body-bg-dark);
   background: var(--logo);
   font-family: 'Josefin Sans', sans-serif;
   outline: none;
@@ -78,7 +89,7 @@ main .form-dark{
   caret-color: var(--light-bg-overlay);
 }
 .form-dark .form__input{
-  color: var(--dark-input-text);
+  color: var(--body-bg-light);
   background: var(--dark-input-bg);
 }
 .form__btn{
