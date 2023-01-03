@@ -1,6 +1,7 @@
 import React from "react";
 import Header from './components/Header';
 import Input from './components/Input';
+import List from './components/List';
 
 function App() {
 
@@ -20,10 +21,11 @@ function App() {
   }
 
   return (
-    <div className={darkMode ? 'container-dark' : 'container'}>
+    <div className={darkMode ? 'container dark' : 'container'}>
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       <main>
         <Input darkMode={darkMode} onSubmit={addTodo} />
+        <List darkMode={darkMode} todoList={todoList} />
       </main>
     </div>
   );
