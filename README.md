@@ -59,11 +59,13 @@ Users should be able to:
 
 - How to change input cursor color
 
-- How to focus without mouse click using autoFocus
+- How to focus without mouse click using `autoFocus`
 
 - How to add gradient border
 
 - How to resolve merge conflict
+
+- How to media-query in jsx using `react-use`
 
 ### Continued development
 
