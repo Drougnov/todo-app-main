@@ -177,6 +177,7 @@ li .delete-btn{
   border-bottom-left-radius: .3rem;
   border-bottom-right-radius: .3rem;
   margin-bottom: .75rem;
+  box-shadow: 0 .75rem .75rem 0 rgba(0, 0, 0, 0.05);
 }
 .status .clear-btn{
   color: var(--circle-border);
@@ -194,8 +195,10 @@ li .delete-btn{
   -moz-border-radius: .3rem;
   -ms-border-radius: .3rem;
   -o-border-radius: .3rem;
+  box-shadow: 0 1.5rem 1.5rem 0 rgba(0, 0, 0, 0.05);
 }
 .filter-small button{
+  font-size: .9rem;
   color: var(--circle-border);
   background: transparent;
   border: none;
