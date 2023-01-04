@@ -143,6 +143,10 @@ ul li,
   color: var(--list-text-dark);
   background: var(--dark-input-bg);
 }
+.no-todo{
+  justify-content: center;
+  padding: .75rem 1rem;
+}
 ul li:first-child{
   border-radius: .3rem .3rem 0 0;
   -webkit-border-radius: .3rem .3rem 0 0;
