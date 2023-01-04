@@ -32,7 +32,7 @@ const List = (props) => {
           <button className='clear-btn'>Clear completed</button>
         </div>
       {!isLarge && (
-          <div>
+          <div className='filter-small'>
             <button>All</button>
             <button>Active</button>
             <button>Completed</button>

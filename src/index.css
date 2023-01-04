@@ -124,7 +124,8 @@ main .list-container{
   list-style-type: none;
 }
 ul li,
-.list-container .status{
+.list-container .status,
+.list-container .filter-small{
   width: 100%;
   min-height: 3rem;
   color: var(--list-text-light);
@@ -137,7 +138,8 @@ ul li,
   position: relative;
 }
 .list-container.dark ul li,
-.list-container.dark .status{
+.list-container.dark .status,
+.list-container.dark .filter-small{
   color: var(--list-text-dark);
   background: var(--dark-input-bg);
 }
@@ -173,6 +175,23 @@ li .delete-btn{
   margin-bottom: .75rem;
 }
 .status .clear-btn{
+  color: var(--circle-border);
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.list-container .filter-small{
+  justify-content: center;
+  gap: 1rem;
+  padding: .75rem 1.5rem;
+  border-bottom: none;
+  border-radius: .3rem;
+  -webkit-border-radius: .3rem;
+  -moz-border-radius: .3rem;
+  -ms-border-radius: .3rem;
+  -o-border-radius: .3rem;
+}
+.filter-small button{
   color: var(--circle-border);
   background: transparent;
   border: none;
