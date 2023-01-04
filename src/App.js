@@ -16,8 +16,13 @@ function App() {
     if(!todo.text || /^\s*$/.test(todo.text)){ //check if the current todo is empty or only white space
       return;
     }
-    todo = todo["text"].replace(/\s+/g, ' ');  //trim extra spaces
-    setTodoList([todo, ...todoList]);
+    todo["text"] = todo["text"].replace(/\s+/g, ' ');  //trim extra spaces
+    setTodoList([...todoList, todo]);
+  }
+
+  const deleteTodo=(event, todoId)=>{
+    event.stopPropagation();
+    setTodoList(oldTodos => oldTodos.filter(todo => todo.id !== todoId))
   }
 
   return (
@@ -25,7 +30,7 @@ function App() {
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       <main>
         <Input darkMode={darkMode} onSubmit={addTodo} />
-        <List darkMode={darkMode} todoList={todoList} />
+        <List darkMode={darkMode} todoList={todoList} deleteTodo={deleteTodo} />
       </main>
     </div>
   );
