@@ -6,7 +6,11 @@ import List from './components/List';
 function App() {
 
   const [darkMode, setDarkMode] = React.useState(true);
-  const [todoList, setTodoList] = React.useState([]);
+  const [todoList, setTodoList] = React.useState(()=> JSON.parse(localStorage.getItem("todoList")) || []);
+
+  React.useEffect(()=>{
+    localStorage.setItem("todoList", JSON.stringify(todoList))
+  },[todoList])
   
   const toggleDarkMode =()=>{
     setDarkMode(prevMode => !prevMode);
