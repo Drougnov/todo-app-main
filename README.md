@@ -67,6 +67,8 @@ Users should be able to:
 
 - How to media-query in jsx using `react-use`
 
+- How to check empty/only-white-space and trim extra spaces with regex
+
 ### Continued development
 
 - Nothing came in mind yet
