@@ -160,6 +160,10 @@ ul li:first-child{
 .list-container.dark ul li:nth-child(even){
   background: hsla(235, 24%, 19%, .6);
 }
+li .completed{
+  color: var(--circle-border);
+  text-decoration: line-through;
+}
 li .delete-btn{
   width: 1rem;
   height: 1rem;
