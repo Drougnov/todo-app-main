@@ -8,8 +8,8 @@ const List = (props) => {
 
   const todoList = props.todoList.map(item =>(
     <li key={item.id}>
-      <button type='submit' aria-label='add todo' className='add-btn'></button>
-      <span>{item.text}</span>
+      <input type='checkbox' aria-label='todo completed' className='add-btn' onClick={(e)=>{props.toggleCompleted(e, item.id)}}></input>
+      <span className={item.completed && 'completed'}>{item.text}</span>
       <button className='delete-btn' onClick={(e)=>{props.deleteTodo(e, item.id)}}><img src={crossIcon} alt=""/></button>
     </li>
   ))

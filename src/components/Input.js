@@ -12,7 +12,8 @@ const Input = (props) => {
     props.onSubmit(
       {
         id: nanoid(),
-        text: input
+        text: input,
+        completed: false
       }
     )
   }
