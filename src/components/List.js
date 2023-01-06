@@ -1,6 +1,6 @@
 import React from 'react';
 import { useMedia } from 'react-use';
-import crossIcon from '../images/icon-cross.svg';
+import ListItem from './ListItem';
 
 const List = (props) => {
   const isLarge = useMedia('(min-width: 750px)');
@@ -11,41 +11,30 @@ const List = (props) => {
     setSelectedButton(button);
   }
 
+  const updateCompleted = (id, completed) => {
+    props.toggleCompleted(id, completed);
+  }
+
+
   let todoList = props.todoList.map(item =>(
-    <li key={item.id}>
-      <input type='checkbox' checked={item.completed} aria-label='toggle complete-status' className='complete-btn' onClick={()=>{props.toggleCompleted(item.id)}}></input>
-      <span className={item.completed ? 'completed' : undefined}>{item.text}</span>
-      <button className='delete-btn' onClick={(e)=>{props.deleteTodo(e, item.id)}}><img src={crossIcon} alt=""/></button>
-    </li>
+    <ListItem key={item.id} item={item} toggleCompleted={updateCompleted} deleteTodo={props.deleteTodo} completed={item.completed} />
   ))
 
   if (selectedButton === 'all') {
     todoList = props.todoList.map(item => (
-      <li key={item.id}>
-      <input type='checkbox' checked={item.completed} aria-label='toggle complete-status' className='complete-btn' onClick={()=>{props.toggleCompleted(item.id)}}></input>
-      <span className={item.completed ? 'completed' : undefined}>{item.text}</span>
-      <button className='delete-btn' onClick={(e)=>{props.deleteTodo(e, item.id)}}><img src={crossIcon} alt=""/></button>
-    </li>
+      <ListItem key={item.id} item={item} toggleCompleted={updateCompleted} deleteTodo={props.deleteTodo} completed={item.completed} />
     ));
   } else if (selectedButton === 'active') {
     todoList = props.todoList
       .filter(item => !item.completed)
       .map(item => (
-        <li key={item.id}>
-          <input type='checkbox' checked={item.completed} aria-label='toggle complete-status' className='complete-btn' onClick={()=>{props.toggleCompleted(item.id)}}></input>
-          <span className={item.completed ? 'completed' : undefined}>{item.text}</span>
-          <button className='delete-btn' onClick={(e)=>{props.deleteTodo(e, item.id)}}><img src={crossIcon} alt=""/></button>
-        </li>
+        <ListItem key={item.id} item={item} toggleCompleted={updateCompleted} deleteTodo={props.deleteTodo} completed={item.completed} />
       ));
   } else if (selectedButton === 'completed') {
     todoList = props.todoList
       .filter(item => item.completed)
       .map(item => (
-        <li key={item.id}>
-          <input type='checkbox' checked={item.completed} aria-label='toggle complete-status' className='complete-btn' onClick={()=>{props.toggleCompleted(item.id)}}></input>
-          <span className={item.completed ? 'completed' : undefined}>{item.text}</span>
-          <button className='delete-btn' onClick={(e)=>{props.deleteTodo(e, item.id)}}><img src={crossIcon} alt=""/></button>
-        </li>
+        <ListItem key={item.id} item={item} toggleCompleted={updateCompleted} deleteTodo={props.deleteTodo} completed={item.completed} />
       ));
   }
 
