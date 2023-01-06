@@ -168,12 +168,12 @@ input[type="checkbox"] {
   align-items: center;
   position: relative;
 }
-input[type="checkbox"]::before {
+.list-container [type="checkbox"]::before {
   position: absolute;
   content: "";
   width: 1.125rem;
   height: 1.125rem;
-  background: var(--dark-input-bg);
+  background: var(--logo);
   border: 1px solid var(--circle-border);
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -181,7 +181,15 @@ input[type="checkbox"]::before {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+.list-container.dark [type="checkbox"]::before {
+  background: var(--dark-input-bg);
+}
 input[type="checkbox"]:checked::before {
+  border: linear-gradient(to right, var(--dark-bg-overlay-1), var(--dark-bg-overlay-2));
+  background: linear-gradient(to right, var(--dark-bg-overlay-1), var(--dark-bg-overlay-2));
+}
+.list-container.dark [type="checkbox"]:checked:before {
+  border: linear-gradient(to right, var(--dark-bg-overlay-1), var(--dark-bg-overlay-2));
   background: linear-gradient(to right, var(--dark-bg-overlay-1), var(--dark-bg-overlay-2));
 }
 input[type="checkbox"]:checked::after {
