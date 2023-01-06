@@ -8,8 +8,8 @@ const List = (props) => {
 
   const todoList = props.todoList.map(item =>(
     <li key={item.id}>
-      <input type='checkbox' aria-label='todo completed' className='add-btn' onClick={(e)=>{props.toggleCompleted(e, item.id)}}></input>
-      <span className={item.completed && 'completed'}>{item.text}</span>
+      <input type='checkbox' aria-label='toggle complete-status' className='complete-btn' onClick={()=>{props.toggleCompleted(item.id)}}></input>
+      <span className={item.completed ? 'completed' : undefined}>{item.text}</span>
       <button className='delete-btn' onClick={(e)=>{props.deleteTodo(e, item.id)}}><img src={crossIcon} alt=""/></button>
     </li>
   ))
@@ -29,7 +29,7 @@ const List = (props) => {
               <button>Completed</button>
             </div>
           )}
-          <button className='clear-btn'>Clear completed</button>
+          <button className='clear-btn' onClick={()=>{props.clearCompleted()}}>Clear completed</button>
         </div>
       {!isLarge && (
           <div className='filter-small'>

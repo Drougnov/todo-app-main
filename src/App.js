@@ -7,7 +7,6 @@ function App() {
 
   const [darkMode, setDarkMode] = React.useState(true);
   const [todoList, setTodoList] = React.useState(()=> JSON.parse(localStorage.getItem("todoList")) || []);
-  console.log(todoList)
 
   React.useEffect(()=>{
     localStorage.setItem("todoList", JSON.stringify(todoList))
@@ -30,7 +29,7 @@ function App() {
     setTodoList(oldTodos => oldTodos.filter(todo => todo.id !== todoId))
   }
 
-  const toggleCompleted=(event, todoId)=>{
+  const toggleCompleted=(todoId)=>{
     const updatedTodoList = todoList.map(todo => {
       if (todo.id === todoId) {
         return {...todo, completed: !todo.completed};
@@ -39,14 +38,21 @@ function App() {
     });
     setTodoList(updatedTodoList);
   }
-  
+
+  const clearCompleted=()=>{
+    setTodoList(oldTodos => oldTodos.filter(todo => !todo.completed))
+  }
 
   return (
     <div className={darkMode ? 'container dark' : 'container'}>
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       <main>
         <Input darkMode={darkMode} onSubmit={addTodo} />
-        <List darkMode={darkMode} todoList={todoList} deleteTodo={deleteTodo} toggleCompleted={toggleCompleted} />
+        <List darkMode={darkMode}
+              todoList={todoList}
+              deleteTodo={deleteTodo}
+              toggleCompleted={toggleCompleted}
+              clearCompleted={clearCompleted}/>
       </main>
     </div>
   );
