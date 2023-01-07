@@ -3,7 +3,7 @@ import { useMedia } from 'react-use';
 import ListItem from './ListItem';
 
 const List = (props) => {
-  const isLarge = useMedia('(min-width: 750px)');
+  const isLarge = useMedia('(min-width: 650px)');
 
   const [selectedButton, setSelectedButton] = React.useState('all');
 
@@ -15,7 +15,6 @@ const List = (props) => {
   const updateCompleted = (id, completed) => {
     props.toggleCompleted(id, completed);
   }
-
 
   let todoList = props.todoList.map(item =>(
     <ListItem key={item.id} item={item} toggleCompleted={updateCompleted} deleteTodo={props.deleteTodo} completed={item.completed} />
@@ -53,25 +52,25 @@ const List = (props) => {
         {todoList}
       </ul>
       <div className='status'>
-          {selectedButton === 'all' && <span>{allCounter} items left</span>}
-          {selectedButton === 'active' && <span>{activeCounter} items left</span>}
-          {selectedButton === 'completed' && <span>{completedCounter} items completed</span>}
-          {isLarge && (
-            <div>
-              <button onClick={()=>handleButtonClick('all')} className={selectedButton === 'all' ? 'active-filter' : ''}>All</button>
-              <button onClick={()=>handleButtonClick('active')} className={selectedButton === 'active' ? 'active-filter' : ''}>Active</button>
-              <button onClick={()=>handleButtonClick('completed')} className={selectedButton === 'completed' ? 'active-filter' : ''}>Completed</button>
-            </div>
-          )}
-          <button className='clear-btn' onClick={()=>{props.clearCompleted()}}>Clear completed</button>
-        </div>
-      {!isLarge && (
-          <div className='filter-small'>
+        {selectedButton === 'all' && <span>{allCounter} items left</span>}
+        {selectedButton === 'active' && <span>{activeCounter} items left</span>}
+        {selectedButton === 'completed' && <span>{completedCounter} items completed</span>}
+        {isLarge && (
+          <div className='filter-large'>
             <button onClick={()=>handleButtonClick('all')} className={selectedButton === 'all' ? 'active-filter' : ''}>All</button>
             <button onClick={()=>handleButtonClick('active')} className={selectedButton === 'active' ? 'active-filter' : ''}>Active</button>
             <button onClick={()=>handleButtonClick('completed')} className={selectedButton === 'completed' ? 'active-filter' : ''}>Completed</button>
           </div>
         )}
+        <button className='clear-btn' onClick={()=>{props.clearCompleted()}}>Clear completed</button>
+      </div>
+      {!isLarge && (
+        <div className='filter-small'>
+          <button onClick={()=>handleButtonClick('all')} className={selectedButton === 'all' ? 'active-filter' : ''}>All</button>
+          <button onClick={()=>handleButtonClick('active')} className={selectedButton === 'active' ? 'active-filter' : ''}>Active</button>
+          <button onClick={()=>handleButtonClick('completed')} className={selectedButton === 'completed' ? 'active-filter' : ''}>Completed</button>
+        </div>
+      )}
     </div>
   )
 }
