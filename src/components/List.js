@@ -45,7 +45,7 @@ const List = (props) => {
         {todoList}
       </ul>
       <div className='status'>
-          <span>{props.todoList.length} items left</span>
+          <span>{props.todoList.filter(todo => !todo.completed).length} items left</span>
           {isLarge && (
             <div>
               <button onClick={()=>handleButtonClick('all')}>All</button>
