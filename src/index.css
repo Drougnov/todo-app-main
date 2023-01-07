@@ -254,3 +254,6 @@ li .delete-btn{
   border: none;
   outline: none;
 }
+.active-filter{
+  color: var(--light-bg-overlay) !important;
+}
