@@ -163,6 +163,9 @@ main .list-container{
   color: var(--list-text-dark);
   background: var(--dark-input-bg);
 }
+.list-container ul li{
+  cursor: pointer;
+}
 .no-todo{
   justify-content: center;
   padding: .75rem 1rem;
@@ -187,6 +190,7 @@ input[type="checkbox"] {
   justify-content: center;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 input[type="checkbox"]::before {
   position: absolute;
@@ -234,6 +238,7 @@ li .delete-btn{
   background: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .delete-btn img{
   width: 100%;
@@ -245,7 +250,7 @@ li .delete-btn{
   border-bottom-right-radius: .3rem;
   margin-bottom: .75rem;
   padding: .75rem 1.5rem;
-  box-shadow: 0 .75rem .75rem 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1.5rem 1.5rem 0 rgba(0, 0, 0, 0.05);
 }
 .status span{
   font-size: var(--filter-btn-fs-s);
@@ -257,6 +262,17 @@ li .delete-btn{
   font-family: 'Josefin Sans', sans-serif;
   border: none;
   outline: none;
+  cursor: pointer;
+}
+.clear-btn:hover,
+.filter-small button:hover,
+.filter-large button:hover{
+  color: var(--list-text-light);
+}
+.list-container.dark .clear-btn:hover,
+.list-container.dark .filter-small button:hover,
+.list-container.dark .filter-large button:hover{
+  color: var(--logo);
 }
 .list-container .filter-small{
   justify-content: center;
@@ -277,6 +293,7 @@ li .delete-btn{
   font-family: 'Josefin Sans', sans-serif;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .active-filter{
   color: var(--light-bg-overlay) !important;
@@ -348,6 +365,7 @@ footer p a:hover{
     font-family: 'Josefin Sans', sans-serif;
     border: none;
     outline: none;
+    cursor: pointer;
   }
   .status span,
   .status .clear-btn,
