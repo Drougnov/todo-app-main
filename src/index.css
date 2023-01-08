@@ -90,22 +90,22 @@ main .form{
   height: 1.25rem;
   background: transparent;
   border: 1px solid var(--circle-border);
-  border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  border-radius: 50%;
   cursor: pointer;
 }
 .form .add-btn:hover{
   background: linear-gradient(var(--logo), var(--logo)) padding-box,
   linear-gradient(135deg, var(--dark-bg-overlay-1), var(--dark-bg-overlay-2)) border-box;
   border: 1px solid transparent;
-  border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  border-radius: 50%;
 }
 .form.dark .add-btn:hover,
 .list-container.dark [type="checkbox"]::before{
@@ -121,11 +121,11 @@ main .form{
   font-family: 'Josefin Sans', sans-serif;
   outline: none;
   border: none;
-  border-radius: .3rem;
   -webkit-border-radius: .3rem;
   -moz-border-radius: .3rem;
   -ms-border-radius: .3rem;
   -o-border-radius: .3rem;
+  border-radius: .3rem;
   padding-left: 3.5rem;
   caret-color: var(--light-bg-overlay);
 }
@@ -166,11 +166,11 @@ main .list-container{
   padding: .75rem 1rem;
 }
 .list-container ul li:first-child{
-  border-radius: .3rem .3rem 0 0;
   -webkit-border-radius: .3rem .3rem 0 0;
   -moz-border-radius: .3rem .3rem 0 0;
   -ms-border-radius: .3rem .3rem 0 0;
   -o-border-radius: .3rem .3rem 0 0;
+  border-radius: .3rem .3rem 0 0;
 }
 .list-container ul li:nth-child(even){
   background: hsla(0, 0%, 98%, .6);
@@ -194,11 +194,11 @@ input[type="checkbox"]::before {
   height: 1.125rem;
   background: var(--logo);
   border: 1px solid var(--circle-border);
-  border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  border-radius: 50%;
 }
 .list-container.dark input[type="checkbox"]::before {
   background: var(--dark-input-bg);
@@ -273,11 +273,11 @@ li .delete-btn{
   justify-content: center;
   gap: 1rem;
   border-bottom: none;
-  border-radius: .3rem;
   -webkit-border-radius: .3rem;
   -moz-border-radius: .3rem;
   -ms-border-radius: .3rem;
   -o-border-radius: .3rem;
+  border-radius: .3rem;
   padding: .75rem 1.5rem;
   box-shadow: 0 1.5rem 1.5rem 0 rgba(0, 0, 0, 0.05);
 }
