@@ -6,7 +6,7 @@ const ListItem = ({ item, toggleCompleted, deleteTodo, completed }) => {
         toggleCompleted(item.id, event.target.checked);
     }
     return (
-        <li key={item.id}>
+        <li key={item.id} onClick={()=>{toggleCompleted(item.id)}}>
             <input
                 type='checkbox'
                 checked={completed}
