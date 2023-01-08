@@ -2,6 +2,7 @@ import React from "react";
 import Header from './components/Header';
 import Input from './components/Input';
 import List from './components/List';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
               toggleCompleted={toggleCompleted}
               clearCompleted={clearCompleted}/>
       </main>
+      <Footer />
     </div>
   );
 }
