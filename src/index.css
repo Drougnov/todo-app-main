@@ -5,21 +5,16 @@
   box-sizing: border-box;
 }
 :root{
-  --logo: hsl(0, 0%, 98%);                            /* logo input-bg-light*/
-  --light-bg-overlay: hsl(220, 98%, 61%);             /* bg-overlay-light circle-border-gradient*/
-  --dark-bg-overlay-1: hsl(192, 100%, 67%);           /* bg-overlay-dark-1 */
-  --dark-bg-overlay-2: hsl(280, 87%, 65%);            /* bg-overlay-dark-2 */
-  --list-text-dark: hsl(233, 11%, 84%);               /* list-text-dark*/
-  --dark-input-bg: hsl(235, 24%, 19%);                /* input-bg-dark */
-  --circle-border: hsl(234, 11%, 52%);                /* circle-border */
-  --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
-  --Dark-Grayish-Blue: hsl(236, 9%, 61%);
-  --list-text-light: hsl(235, 19%, 35%);              /* list-text-light*/
-  --body-bg-dark: hsl(235, 21%, 11%);                 /* body-bg-dark input-text-light */
-  --Light-Grayish-Blue: hsl(234, 39%, 85%);
-  --body-bg-light: hsl(236, 33%, 92%);                /* body-bg-light input-text-dark */
-  --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
-  --Very-Dark-Grayish-Blue-2: hsl(237, 14%, 26%);
+  --logo: hsl(0, 0%, 98%);
+  --light-bg-overlay: hsl(220, 98%, 61%);
+  --dark-bg-overlay-1: hsl(192, 100%, 67%);
+  --dark-bg-overlay-2: hsl(280, 87%, 65%);
+  --list-text-dark: hsl(233, 11%, 84%);
+  --dark-input-bg: hsl(235, 24%, 19%);
+  --circle-border: hsl(234, 11%, 52%);
+  --list-text-light: hsl(235, 19%, 35%);
+  --body-bg-dark: hsl(235, 21%, 11%);
+  --body-bg-light: hsl(236, 33%, 92%);
 
   --fs-s: .8125rem;
   --logo-fs-s: 1.75rem;
