@@ -8,6 +8,7 @@ const ListItem = ({ item, toggleCompleted, deleteTodo, completed }) => {
     return (
         <li key={item.id} onClick={()=>{toggleCompleted(item.id)}}>
             <input
+                title={completed ? 'mark as incomplete' : 'mark as complete'}
                 type='checkbox'
                 checked={completed}
                 aria-label='toggle complete-status'
@@ -19,6 +20,7 @@ const ListItem = ({ item, toggleCompleted, deleteTodo, completed }) => {
             </input>
             <span className={completed ? 'completed' : undefined}>{item.text}</span>
             <button
+                title='delete-todo'
                 className='delete-btn'
                 onClick={(e)=>{
                     deleteTodo(e, item.id)

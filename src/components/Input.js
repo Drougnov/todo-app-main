@@ -24,6 +24,7 @@ const Input = (props) => {
   return (
     <form onSubmit={handleSubmit} className={props.darkMode ? "form dark" : "form"}>
       <button
+        title='add todo'
         type='submit'
         aria-label='add todo'
         className='add-btn'>
