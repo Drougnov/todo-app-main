@@ -9,7 +9,6 @@ const List = (props) => {
 
   const handleButtonClick = button =>{
     setSelectedButton(button);
-    console.log(button)
   }
 
   const updateCompleted = (id, completed) => {
