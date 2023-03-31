@@ -1,31 +1,49 @@
-import React from 'react';
-import crossIcon from '../images/icon-cross.svg';
+import React from "react";
+import crossIcon from "../images/icon-cross.svg";
 
-const ListItem = ({ item, toggleCompleted, deleteTodo, completed }) => {
+const ListItem = ({
+    item,
+    toggleCompleted,
+    deleteTodo,
+    completed,
+    handleDragStart,
+    index,
+}) => {
     const handleChange = (event) => {
         toggleCompleted(item.id, event.target.checked);
-    }
+    };
     return (
-        <li key={item.id} onClick={()=>{toggleCompleted(item.id)}}>
+        <li
+            key={item.id}
+            onClick={() => {
+                toggleCompleted(item.id);
+            }}
+            draggable="true"
+            onDragStart={handleDragStart}
+            data-index={index}
+        >
             <input
-                title={completed ? 'Mark as incomplete' : 'Mark as complete'}
-                type='checkbox'
+                title={completed ? "Mark as incomplete" : "Mark as complete"}
+                type="checkbox"
                 checked={completed}
-                aria-label='toggle complete-status'
-                className='complete-btn'
-                onClick={()=>{
-                    toggleCompleted(item.id)
+                aria-label="toggle complete-status"
+                className="complete-btn"
+                onClick={() => {
+                    toggleCompleted(item.id);
                 }}
-                onChange={handleChange}>
-            </input>
-            <span className={completed ? 'completed' : undefined}>{item.text}</span>
+                onChange={handleChange}
+            ></input>
+            <span className={completed ? "completed" : undefined}>
+                {item.text}
+            </span>
             <button
-                title='Delete todo'
-                className='delete-btn'
-                onClick={(e)=>{
-                    deleteTodo(e, item.id)
-                }}>
-                <img src={crossIcon} alt=""/>
+                title="Delete todo"
+                className="delete-btn"
+                onClick={(e) => {
+                    deleteTodo(e, item.id);
+                }}
+            >
+                <img src={crossIcon} alt="" />
             </button>
         </li>
     );
