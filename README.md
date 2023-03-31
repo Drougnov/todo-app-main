@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Yet to add](https://your-solution-url.com)
-- Live Site URL: [Yet to add](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/todo-app-main-solution-with-drag-and-drop-responsive-mobile-first-oPykEt4YR9](https://www.frontendmentor.io/solutions/todo-app-main-solution-with-drag-and-drop-responsive-mobile-first-oPykEt4YR9)
+- Live Site URL: [https://Drougnov.github.io/todo-app-main](https://Drougnov.github.io/todo-app-main)
 
 ## My process
 
@@ -65,8 +65,8 @@ How to:
 
 ### Continued development
 
-- [x] Add drag and drop feature
-- [x] Add dark mode on user theme preference
+- [x] Add drag and drop feature ✔️
+- [x] Add dark mode on user theme preference ✔️
 
 ### Useful resources
 
