@@ -1,6 +1,4 @@
-# 🚧🚧 Site On Construction 🚧🚧
-
-<!-- # Frontend Mentor - Todo app solution
+# Frontend Mentor - Todo app solution
 
 This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
@@ -35,7 +33,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Todo app's screenshot](./public/design/desktop-preview.jpg)
 
 ### Links
 
@@ -55,32 +53,30 @@ Users should be able to:
 
 ### What I learned
 
-- How to undo a commit
+How to:
 
-- How to change input cursor color
-
-- How to focus without mouse click using `autoFocus`
-
-- How to add gradient border
-
-- How to resolve merge conflict
-
-- How to media-query in jsx using `react-use`
-
-- How to check empty/only-white-space and trim extra spaces with regex
+- Undo a commit
+- Resolve merge conflict
+- Change input cursor color
+- Focus without mouse click using `autoFocus`
+- Add gradient border
+- Add media-query in jsx using `react-use`
+- check empty/only-white-space and trim extra spaces with regex
 
 ### Continued development
 
-- Nothing came in mind yet
+- [x] Add drag and drop feature
+- [x] Add dark mode on user theme preference
 
 ### Useful resources
 
-- [Google](https://google.com)
-- [stackoverflow](https://www.stackoverflow.com)
-- [chatGPT](https://chat.openai.com)
+- [chatGPT](chat.openai.com/chat)
+- [stackoverflow](www.stackoverflow.com)
+- [google](www.google.com)
 
 ## Author
 
 - Website - [Rocky Barua](https://rockybarua.netlify.app)
 - Frontend Mentor - [@Drougnov](https://www.frontendmentor.io/profile/Drougnov)
-- Twitter - [@itz_rocky_barua](https://twitter.com/itz_rocky_barua) -->
+- Twitter - [@itz_rocky_barua](https://twitter.com/itz_rocky_barua)
+- LinkedIn - [Rocky (Biplob) BARUA](https://www.linkedin.com/in/rockybarua)
